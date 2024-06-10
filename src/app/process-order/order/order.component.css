@@ -1,0 +1,295 @@
+.blocMarginCustom {
+    margin-top: 150px;
+}
+
+/* form */
+#customselected {
+    width: 57%;
+}
+
+/* Checkbox form */
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-wrapper-42 {
+    margin-right: 20px;
+}
+
+.checkbox-wrapper-42 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-42 label {
+    display: inline-block;
+}
+
+.checkbox-wrapper-42 .cbx {
+    position: relative;
+    top: 1px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    vertical-align: middle;
+    transition: background 0.1s ease;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-42 .cbx:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 5px;
+    height: 11px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+}
+
+.checkbox-wrapper-42 .lbl {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-42 input[type="checkbox"]:checked ~ .cbx {
+    border-color: transparent;
+    background: #6871f1;
+    animation: jelly-42 0.6s ease;
+}
+
+.checkbox-wrapper-42 input[type="checkbox"]:checked ~ .cbx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+.checkbox-wrapper-42 .cntr {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@-moz-keyframes jelly-42 {
+    from {
+        transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+@-webkit-keyframes jelly-42 {
+    from {
+        transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+@-o-keyframes jelly-42 {
+    from {
+        transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+@keyframes jelly-42 {
+    from {
+        transform: scale(1, 1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+/* Récapitulatif commande */
+
+#resum_order {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#test { 
+    box-shadow: 2px 3px 20px rgba(63, 61, 61, 0.164);
+
+border-radius: 25px;;
+}
+.bottomCust{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomCust2{
+    padding-bottom: 60px;
+}
+
+.customBloc_orders {
+    margin-bottom: 13px;
+}
+.custom-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.custom-margin2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.custom-margin3 p {
+    margin-bottom: 0px;
+}
+.custom-margin3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.custom_content {
+    font-size: 14px;
+}
+
+.trash {
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-margin4 {
+    margin-left: 80px;
+    padding-left: 0px;
+}
+.custom-margin4 p {
+    margin-bottom: 0px;
+}
+.custom-margin5 p {
+    margin-bottom: 0px;
+}
+
+.custom-margin5 {
+    margin-left: 80px;
+    margin-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.customTxt {
+    font-size : 12px;
+    text-align: justify;
+    margin-right: 79px;
+    margin-top: 5px;
+}
+
+@media (max-width: 1399px) {
+    #resum_order {
+        padding-right: 0px;
+    }
+
+    .custom-margin5 {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 989px) {
+    #btnMobCust {
+        margin-bottom: 40px;
+        margin-top: 40px !important;
+        display: flex;
+        justify-content: center;
+    }
+    #resum_order {
+        padding-left: 0px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 574px) {
+    .blocMarginCustom {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .checkbox-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 398px) {
+    .custom-margin4 {
+        margin-left: 65px;
+        padding-right: 0px;        
+    }
+}

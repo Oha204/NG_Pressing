@@ -1,0 +1,51 @@
+#custom_bloc_payment {
+    background-color: rgba(2, 8, 43, 0.116);
+    border-radius: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 35px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+#delete_payment {
+    font-size: 13px;
+}
+
+#custom_img {
+    margin-left: 35px;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 989px) {
+    #custom_bloc_payment {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 880px) {
+    #custom_bloc_payment {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 766px) {
+    #custom_mobile_margin {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 452px) {
+    #custom_bloc_payment {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 486px) {
+    #custom_bloc_payment p{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,33 @@
+<section>
+    <div class="container" id="custom_padding_mobile">
+        <div class="col" id="ironing" (click)="toggleService('ironing')">
+            <div class="overlay"></div>
+            <h3 class="pt-1" id="custom_title">Repassage</h3>
+            <p id="custom_paragraphe" *ngIf="ironingOpen">Vous en avez marre de repasser ? Confiez vos vêtements à Clean Up’, nos équipes sont toutes formées aux techniques de repassage et disposent d’un matériel professionnel.</p>
+        </div>
+
+        <div class="col" id="washing" (click)="toggleService('washing')">
+            <div class="overlay"></div>
+            <h3 class="pt-1" id="custom_title">Lavage</h3>
+            <p id="custom_paragraphe" *ngIf="washingOpen">Donnez à vos textiles un lavage adapté à leur composition. Ne vous préoccupez plus de savoir s'il s'agit d'un lavage à sec, avec quelle type de lessive, nos collaborateurs s'occupent de tout.</p>
+        </div>
+
+        <div class="col" id="sewing" (click)="toggleService('sewing')">
+            <div class="overlay"></div>
+            <h3 class="pt-1" id="custom_title">Réparation</h3>
+            <p id="custom_paragraphe" *ngIf="sewingOpen">Clean Up’ met tout en œuvre pour vous satisfaire et vous faire gagner du temps. Ourlets et ajustements en tout genre, réparations, fermetures, boutons, couture… Il vous suffit de nous demander.</p>
+        </div>
+
+        <div class="col" id="stain_removal" (click)="toggleService('stain_removal')">
+            <div class="overlay"></div>
+            <h3 class="pt-1" id="custom_title">Détachage</h3>
+            <p id="custom_paragraphe" *ngIf="stainRemovalOpen">Faites confiance à nos équipes pour redonner vie à vos vêtements en enlevant toutes les tâches, même les plus difficiles, et ce sans détériorer votre textile.</p>
+        </div>
+
+        <div class="col" id="laundry" (click)="toggleService('laundry')">
+            <div class="overlay"></div>
+            <h3 class="pt-1" id="custom_title">Blanchisserie</h3>
+            <p id="custom_paragraphe" *ngIf="laundryOpen">Votre robe ou votre chemise préférée a perdu sa blancheur d'origine ? Faites confiance à nos équipes pour rendre votre textile comme neuf.</p>
+        </div>
+    </div>
+</section>

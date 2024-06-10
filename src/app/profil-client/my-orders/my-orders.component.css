@@ -1,0 +1,76 @@
+#custom_bloc_orders {
+    background-color: rgba(2, 8, 43, 0.068);
+    border-radius: 35px;
+    height: 100vh;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 90px;
+    padding-left: 90px;
+}
+
+.line_order {
+    border-bottom: 1px solid rgba(2,8,43,0.2);
+}
+
+.line_order td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.custom_title {
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(2,8,43,0.2);
+
+}
+/* responsive */
+
+@media only screen and (min-width: 250px) and (max-width: 707px) {
+    td {
+        font-size: 13px;
+    }
+
+    #custom_bloc_orders {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+@media (min-width: 551px) {
+    .table-mobile {
+        display : none;
+    }
+}
+
+@media (max-width: 551px) {
+    .table-PC {
+        display : none;
+    }
+
+
+    .line_order td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 396px) {
+    #custom_bloc_orders {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 417px) {
+    #custom_bloc_orders {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+}

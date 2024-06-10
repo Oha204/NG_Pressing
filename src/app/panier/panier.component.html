@@ -1,0 +1,146 @@
+<div >
+<!-- Bloc suivi commande -->
+<div class="padmarg_custom" >
+    <div class="container">
+        <div class="track">
+            <div class="step "> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/shopping-cart_user.png">
+                    <img class="active-icon" width="17" height="17" src="assets/icons/orders.png">
+                </span>
+                <span class="text">Panier</span>
+            </div>
+            <div class="step"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/store.png">
+                    <img class="active-icon" width="17" height="17" src="assets/icons/store_bl.png">
+                </span>
+                <span class="text">Date de dépôt</span>
+            </div>
+            <div class="step"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/user_profil.png">
+                    <img class="active-icon" width="17" height="17" src="assets/icons/user_prodil_bl.png">
+                </span> 
+                <span class="text">Info Profil</span>
+            </div>
+            <div class="step"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/euro.png"> 
+                    <img class="active-icon" width="17" height="17" src="assets/icons/euro_bl.png"> 
+                </span> 
+                <span class="text">Paiement</span>
+            </div>
+        </div>
+    </div>        
+</div>
+
+
+    <!-- Panier PC -->
+    <div class="container" id="">
+        <div class="row">
+            <div class="col">
+                <h2>Mon panier</h2>
+                <hr>
+                <!-- Bloc 1.1 - Panier -->
+                <div>
+                    <div class="customBloc_panier" *ngFor="let commandline of panier; let i = index">
+                        <div class="row custom-margin2">
+                            <div class="col custom-margin3">
+                                <p class="">{{commandline.prestations.name}}</p>
+                            </div>
+                            <div class="col-3 custom-margin3">
+                                <p class="text-end">{{ getTotalPriceLineCommand(commandline) }}€</p>
+                            </div>
+                            <div class="col-1 trash">
+                                <a type="submit" (click)="removeFromPanier(i)"><img src="assets/icons/trash-red.png" style="width: 13px;"></a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col custom-margin4">
+                                    <p class="custom_content">⨽ {{commandline.articles.name }} ({{commandline.articlesQuantity }})</p>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col custom-margin4">
+                                    <p class="custom_content">⨽ {{commandline.materials.name }}</p>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col custom-margin4">
+                                <p class="custom_content">⨽ Message (<img  width="15" height="15" src="assets/icons/discussion.png">)</p>
+                                <p class="customTxt"> {{commandline.message }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <hr class="mx-4 my-4">
+        
+                <div class="bottomCust2">
+                    <div class="row custom-margin2">
+                        <div class="col custom-margin3">
+                            <p class="custom_content">Total HT :</p>
+                        </div>
+                        <div class="col-3 custom-margin3">
+                            <p class="text-end custom_content">{{ getTotalPriceAllCommands() }}€</p>
+                        </div>
+                    </div>
+
+                    <div class="row custom-margin2">
+                        <div class="col custom-margin3">
+                            <p class="">Total TTC (TVA 10%) :</p>
+                        </div>
+                        <div class="col-3 custom-margin3">
+                            <p class="text-end">{{ getTotalPriceTTC() }}€</p>
+                        </div>
+                    </div>
+                <div  class="bottomCust">
+                    <button routerLink="/order_selectDate" type="submit" id="btn1" class="btn mb-3">Continuer</button>
+                </div>
+
+                <!-- Bloc 1.2 - Vous n'avez rien oublié -->
+                <div class="margin-bloc-forget">
+                    <h3>Vous n’avez rien oublié ? </h3>
+                    <hr  class="mb-4">
+                    <div class="row" id="forget-order">
+                        <a class="col text-decoration-none" id="ironing" routerLink="/order">
+                            <div class="overlay"></div>
+                            <h3 class="pt-1" id="custom_title">Repassage</h3>
+                        </a>
+
+                        <a class="col text-decoration-none" id="washing" routerLink="/order">
+                            <div class="overlay"></div>
+                            <h3 class="pt-1" id="custom_title">Lavage</h3>
+                        </a>
+
+                        <a class="col text-decoration-none" id="sewing" routerLink="/order">
+                            <div class="overlay"></div>
+                            <h3 class="pt-1" id="custom_title">Réparation</h3>
+                        </a>
+
+                        <a class="col text-decoration-none" id="stain_removal" routerLink="/order">
+                            <div class="overlay"></div>
+                            <h3 class="pt-1" id="custom_title">Détachage</h3>
+                        </a>
+
+                        <a class="col text-decoration-none" id="laundry" routerLink="/order">
+                            <div class="overlay"></div>
+                            <h3 class="pt-1" id="custom_title">Blanchisserie</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+   
+</div>

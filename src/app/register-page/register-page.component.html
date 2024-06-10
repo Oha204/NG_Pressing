@@ -1,0 +1,78 @@
+<section id="bloc_register" >
+    <div class="container" id="customForm">
+        <div class="text-center mb-3" id="custom_title_mobile">
+            <h2 class="pt-4 mt-3">Vous n'avez pas de compte ?</h2>
+            <h3 class="mb-4 pt-3" > Créez-vous en un ⤵️</h3>
+        </div>
+
+        <div>{{feedback}}</div>
+
+        <form [formGroup]="formregister" (ngSubmit)="handleSubmit()" class="px-5 pt-2 " > 
+            <div class="row mb-3" id="custom_margin_mobile">
+                <div class="col-md-2 form-group">
+                    <label class="mb-2" for="gender">Genre :</label>
+                    <select class="form-select" aria-label="Default select example" formControlName="gender">
+                        <option value="Mme">Mme</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="col-md">
+                    <label class="form-label" for="lastname">Nom :</label>
+                    <input name="lastname" type="text" class="form-control" formControlName="lastname"/>
+                </div>
+
+                <div class="col-md">
+                    <label class="form-label" for="firstname">Prénom :</label>
+                    <input name="firstname" type="text" class="form-control" formControlName="firstname"/>
+                </div>
+
+                <div class="col-md">
+                    <label for="birthday" class="form-label">Date de naissance :</label>
+                    <input type="date" class="form-control" id="inputBirthday" formControlName="birthday">
+                </div>
+            </div>
+
+            <div class="row mb-3" id="custom_margin_mobile">
+                <div class="col-md">
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="email">Email* :</label>
+                        <input name="email" type="email" class="form-control" formControlName="email"/>
+                    </div>
+                    <div>{{errorMail}}</div>
+                </div>
+
+                <div class="col-md">
+                    <div class="col">
+                        <label for="address" class="form-label">Adresse Postale :</label>
+                        <input type="text" class="form-control" id="inputAddress" formControlName="address" placeholder="25 cours lafayette, 69003 LYON">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="paswword">Mot de passe* :</label>
+                        <input type="password" name="password" class="form-control" formControlName="password" />            
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="paswwordok">Confirmez votre mot de passe* :</label>
+                        <input type="password" name="password_verif" class="form-control" formControlName="password_verif"/>
+                    </div>
+                </div>
+            </div>
+            <div>{{errorPass1}}</div>
+            <div>{{errorPass2}}</div>
+
+            <div class="text-center mt-4 pb-5">
+                <button type="submit" class="btn" id="btn3" role="button">S'inscrire</button>
+            </div> 
+        </form>
+    </div>
+</section>
+

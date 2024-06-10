@@ -1,0 +1,70 @@
+.nav-link.active {
+  color:rgb(42, 111, 125);
+}
+.nav-link {
+  color:rgb(13, 29, 32);
+}
+
+p {
+  text-align: justify;
+}
+
+img {
+  width: 60%;
+}
+
+#bloc_value {
+  padding-top: 50px;
+}
+
+#value_part {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+#value_part p{
+  margin-right: 50px;
+}
+
+#bloc_engagements {
+  background-color: rgba(113, 219, 200, 0.25);
+}
+
+#customBloc_Enga {
+  margin-bottom: 0px !important; 
+}
+
+@media (max-width: 767px) {
+  #value_part {
+    text-align: center;
+  }
+  #value_part p{
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  #carrou_valeur_mobile {
+    padding-right: 0px;
+  }
+
+  #custom_engagement {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #custon_engagement_ex h3{
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 580px) {
+  #custon_engagement_ex {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  
+}

@@ -1,0 +1,65 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary px-3 shadow-sm fixed-top" id="menu_small">
+    <div class="container-fluid">
+        <img class="navbar-brand" src="assets/Logo.png"/>
+        <button  class="menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick=" this.classList.toggle('opened'); this.setAttribute('aria-expanded', this.classList.contains('opened')); document.body.style.overflow = this.classList.contains('opened') ? 'hidden' : 'auto';">
+
+            <!--<script>
+                let menuOpen = false;
+                let menu = document.getElementById("navbarSupportedContent");
+            
+                function toggleMenu() {
+                    menuOpen = !menuOpen;
+                    menu.style.display = menuOpen ? "block" : "none";
+                    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+                }
+            </script>--><!--Test pour que lorsque je clic sur un élément du enu, chemin vers route + fermeture collapse-->
+
+            <svg  viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+
+        <div class="collapse navbar-collapse margincustmobburger" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" id="test_togglemenu">
+                <li class="nav-item">
+                    <a id="link_nav" class="nav-link mx-2" routerLink="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_nav" class="nav-link mx-2" routerLink="/services">Prestations & Tarifs</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_nav" class="nav-link mx-2" routerLink="/about_us">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_nav" class="nav-link mx-2" routerLink="/contact">Contact</a>
+                </li>
+            </ul>
+            
+            <hr>
+
+            <div class="" role="search" >
+                <div id="custom_btn_mobile">
+                    <button class="btn mx-2 btn-mobile" id="btn1" routerLink="/order">Commander</button>
+                    
+                    <ng-container *ngIf="isLogged(); else btnlogout">
+                        <button class="btn btn-danger" (click)="logout()">Logout</button>
+                        <button class="btn mx-2" id="btn3" routerLink="/profil_user">Profil</button> 
+                        <a  routerLink="/panier"><img src="assets/icons/panier_icon.png" class="customSize"></a>
+                    </ng-container>
+                    
+                    <ng-template #btnlogout>
+                        <button type="button" class="btn" id="btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Connexion</button>
+                    </ng-template>
+
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <app-modal-login-form></app-modal-login-form>
+

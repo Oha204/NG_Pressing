@@ -1,0 +1,76 @@
+<section>
+  <div class="customservice">
+    <h2 class="text-center">Nos prestations disponibles</h2>
+    <!-- Desc Service - PC -->
+    <div class="container mt-5" id="bloc1-PC">
+      <div class="row">
+        <div class="col mb-4" *ngFor="let items of prestations">
+          <div class="card custom-card" [style.backgroundImage]="'url(' + items.image + ')'">
+            <div class="overlay"></div>
+            <div class="card-body d-flex flex-column justify-content-end">
+              <h3 class="card-title text-white mb-0">{{ items.name }}</h3>
+              <p class="mb-0">
+                <a (click)="toggleCollapse(items)" role="button" aria-expanded="false" aria-controls="collapseExample" class="text-decoration-none text-white ">En savoir plus ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12" *ngIf="selectedItem of prestations">
+          <div class="collapse show" id="collapseExample">
+            <div class="card card-body p-4">
+              <h2 class="mb-4">{{ selectedItem.name }}</h2>
+              <p>{{ selectedItem.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desc Service - Tablette/Mobile -->
+    <div class="container mt-5" id="bloc1-tabMob">
+      <div class="">
+        <div class="col-12 mb-4" *ngFor="let items of prestations">
+          <div class="card custom-card-mob" [style.backgroundImage]="'url(' + items.image + ')'" [style.backgroundPosition]="'center center'">
+            <div class="overlay"></div>
+            <div class="card-body d-flex flex-column justify-content-end">
+              <h3 class="card-title text-white mb-0">{{ items.name }}</h3>
+              <p class="mb-0">
+                <a (click)="toggleCollapse(items)" role="button" class="text-decoration-none text-white " 
+                    [attr.aria-expanded]="selectedItem === items ? 'true' : 'false'"
+                    [attr.aria-controls]="'collapseExample_' + items.id">En savoir plus ></a>
+              </p>
+            </div>
+          </div>
+        
+          <div class="col-12" *ngIf="selectedItem === items">
+            <div class="collapse show" [id]="'collapseExample_' + items.id">
+              <div class="card card-body p-4">
+                <h2 class="mb-4">{{ items.name }}</h2>
+                <p>{{ items.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Les prix & simulateur -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-5"  id="custom-listPrice"> 
+        <app-list-price></app-list-price>
+      </div>
+      <div class="col-lg-7 custom-mob-txt">
+        <div class="pb-4" id="custom_txt">
+          <h2 class="mb-4">Notre simulateur </h2>
+          <p>CleanUp' vous propose également son simulateur de prix. Le fonctionnement est simple, choissisez le service que vous désirez ainsi que l'article concerné et sa quantité. Comme certaines matières demandent un traitement particulier, il vous faudra nous indiquer la composition de vos vêtements. Et hop, le tour est joué, vous disposez d'un prix, facile, non ?</p>
+        </div>
+        <div>
+          <app-simulateur-price></app-simulateur-price>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

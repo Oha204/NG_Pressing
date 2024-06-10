@@ -1,0 +1,224 @@
+#custom_bloc_orders {
+    background-color: rgba(2, 8, 43, 0.068);
+    border-radius: 35px;
+    height: 100%;
+    width: 100%;
+}
+
+.retour_custom { 
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.retour_custom  img{ 
+    padding-right: 5px;
+}
+
+.padmarg_custom {
+    padding-bottom: 60px;
+    padding-right: 90px;
+    padding-left: 90px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+th {
+    font-size: 14px;
+}
+
+td {
+    font-size: 13px;
+}
+
+
+/* Suivi commande */
+.track{
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 50px
+}
+
+
+.track .step{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+.track .step.active:before{
+    background: #02082B
+}
+.track .step::before{
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+.track .step.active .icon{
+    background: #02082B;
+    color: #02082B;
+    text-align: center;
+}
+.track .icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+.track .step.active .text{
+    font-weight: 400;
+    color: #000
+}
+.track .text{
+    display: block;
+    margin-top: 7px
+}
+
+.track .icon .active-icon {
+    display: none;
+}
+
+.track .step.active .icon .active-icon {
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.track .step.active .icon .inactive-icon {
+    display: none;
+}
+
+.track .icon .inactive-icon {
+    display: inline-block;
+}
+
+/* Suivi commande - Responsive */
+@media (max-width: 494px) {
+    .text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 401px) {
+    .text {
+        font-size: 12px;
+    }
+}
+
+/* Détails commande PC - Tablette */
+
+.table {
+    padding: 10px;
+}
+
+.custom-size-txt {
+    font-size: 13px;
+}
+
+.alignement-custom {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-bubble {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    cursor: help;
+}
+
+.info-bubble:hover::after {
+    content: attr(value);
+    display: block;
+    position: absolute;
+    background-color: #02082B;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* Détails commande PC - Tablette  responsive */
+
+@media only screen and (min-width: 753px) and (max-width: 837px) {
+    .padmarg_custom {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 753px) {
+    .padmarg_custom {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (min-width: 634px) {
+.tablev2 {
+    display: none;
+}
+}
+
+/* Détails commande Mobile */
+
+
+@media (max-width: 634px) {
+    .table {
+        display: none;
+    }
+
+    .tablev2 {
+        display: block;
+    }
+
+    .tablev2 h3{
+        font-size: 20px;
+    }
+
+    .custom_margin_select {
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .custom_margin_v2 p{
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 494px) {
+    .details_info_order p {
+        font-size: 14px;
+    }
+
+    .padmarg_custom h3 {
+        padding-bottom: 0px !important;
+    }
+
+    .custom-Total_price p {
+        font-size: 14px;
+    }
+}
+
+
+
+

@@ -1,0 +1,99 @@
+#photo_profil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#custom_img img{
+    margin-right: 7px;
+}
+
+#custom_card_profil img{
+    margin-right: 10px;
+}
+
+#custom_card_profil {
+    background-color: rgba(2, 8, 43, 0.116);
+    border-radius: 35px;
+    padding-left: 40px;
+}
+
+#custom_margin_mobile_photo {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+/* responsive tablette */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    #custom_margin_mobile_photo {
+        margin-right: 50px;
+    }
+
+    #test_margin_mobile {
+        margin-left: 50px;
+    }
+
+    #custom_margin_mobile_photo a {
+        font-size: 14px;
+    }
+
+    #custom_card_profil p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #custom_card_profil h3 {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    #custom_element {
+        margin-bottom: 30px;;
+    }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 990px) {
+    .container {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #custom_card_profil h3 {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    #custom_margin_mobile_photo a {
+        font-size: 14px;
+    }
+
+    #custom_card_profil p {
+        font-size: 15px;
+    }
+
+    #custom_element {
+        margin-bottom: 30px;;
+    }
+
+    #custom_img {
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    #custom_card_profil img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #custom_card_profil p {
+        font-size: 14px;
+    }
+
+    #custom_card_profil {
+        padding-right: 20px;
+    }
+}

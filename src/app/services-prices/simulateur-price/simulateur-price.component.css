@@ -1,0 +1,38 @@
+h3 {
+    font-size: 23px;
+}
+
+.custom-mob-align-txt {
+    text-align: end;
+}
+
+.cust-btn-mob  {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (max-width: 531px) {
+    #custom-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mobile-priceT {
+        margin-bottom: 35px;;
+    }
+
+    .custom-mob-align-txt {
+        text-align: start;
+    }
+
+    #cust-marg-mob {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .cust-btn-mob  {
+        display: flex;
+        justify-content: center;
+    }
+}

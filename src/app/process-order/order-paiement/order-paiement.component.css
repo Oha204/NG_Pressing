@@ -1,0 +1,340 @@
+p {
+    margin-bottom: 0px;
+}
+
+.customMarge {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.blocCustom {
+    margin-bottom: 10px;
+}
+
+.padmarg_custom {
+    padding-bottom: 80px;
+    padding-top: 110px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Suivi commande */
+.track{
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 50px
+}
+
+
+.track .step{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+.track .step.active:before{
+    background: #02082B
+}
+.track .step::before{
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+.track .step.active .icon{
+    background: #02082B;
+    color: #02082B;
+    text-align: center;
+}
+.track .icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+.track .step.active .text{
+    font-weight: 400;
+    color: #000
+}
+.track .text{
+    display: block;
+    margin-top: 7px
+}
+
+.track .icon .active-icon {
+    display: none;
+}
+
+.track .step.active .icon .active-icon {
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.track .step.active .icon .inactive-icon {
+    display: none;
+}
+
+.track .icon .inactive-icon {
+    display: inline-block;
+}
+
+ /* responsive frise chrono suivi commande */
+@media (max-width: 1025px) {
+    .padmarg_custom {
+        width: 70%;
+    }
+}
+@media (max-width: 562px) {
+    .padmarg_custom {
+        width: 80%;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}
+
+/* Panier PC */
+/* Bloc 1 - cards contact profil */
+
+.customcardsProfil {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(78, 78, 78, 0.192);
+    box-shadow: 2px 3px 20px rgba(63, 61, 61, 0.034);
+    border-radius: 25px;
+    width: 70%;
+    margin-left: 0px;
+}
+
+#custom_card_profil {
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+}
+
+#custom_card_profil p{
+    margin-bottom: 1px;
+}
+
+.btncustom {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.custMob {
+    margin-right: 15px;
+}
+
+.editCust {
+    margin-right: 35px;
+    margin-bottom: 15px;
+}
+
+.editCust img{
+    margin-right: 5px;
+}
+
+/* Bloc 2 - Add cards & payed  */
+.custtxt p{
+    margin-bottom: 0px;
+    margin-right: 10px;
+}
+
+.accordion {
+    width: 70%;
+}
+
+/* bloc 3 : Récapitulatif commande */
+
+#resum_order {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#test { 
+    box-shadow: 2px 3px 20px rgba(63, 61, 61, 0.164);
+}
+.bottomCust{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomCust2{
+    padding-bottom: 10px;
+}
+
+.customBloc_orders {
+    margin-bottom: 13px;
+    margin-top: 13px;
+}
+.custom-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.custom-margin2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.custom-margin3 p {
+    margin-bottom: 0px;
+}
+.custom-margin3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.custom_content {
+    font-size: 14px;
+}
+
+.cust-txt-mobile {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Bloc 4 :  */
+.customcardsProfil2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(78, 78, 78, 0.192);
+    box-shadow: 2px 3px 20px rgba(63, 61, 61, 0.034);
+    border-radius: 25px;
+}
+
+.custInfo {
+    margin-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#custom_cardUser {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+#custom_cardUser p{
+    margin-bottom: 5px;
+}
+
+#custom_cardUser img{
+    margin-right: 10px;
+}
+
+/* Récapitulatif commande - responsive */
+@media (max-width: 1400px) {
+    #resum_order {
+        padding-right: 0px;
+    }
+
+    .custInfo {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .customcardsProfil {
+        width: 100%;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    #custom_cardUser h3{
+        font-size: 25px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    #resum_order {
+        padding-left: 0px;
+    }
+
+    .padmarg_custom {
+        padding-bottom: 60px;
+    }
+
+    .titleCustMob1 {
+        text-align: center;
+    }
+
+    .titleCustMob2 {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .paracustom {
+        margin-top: 20px;
+    }
+
+    .accordion {
+        margin-bottom: 35px;
+    }
+    .custInfo {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    #resum_order {
+        padding-left: 0px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    .titleCustMob1 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .customMob {
+        margin-right: 35px;
+        margin-left: 35px;
+    } 
+
+    .mobileCust {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .custInfo {
+        margin-right: 30px;
+        margin-left: 30px;
+    } 
+}
+
+@media (max-width: 380px) {
+    .mobileCust p{
+        font-size: 15px;
+    } 
+}

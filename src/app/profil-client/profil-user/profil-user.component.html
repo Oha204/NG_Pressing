@@ -1,0 +1,97 @@
+
+
+<section class=" mx-5 my-5" id="margin_user_profil">
+    <div class="row">
+        <div class="col-lg-3" id="menu_profil_v1">
+            <ul class="nav flex-column">
+                <div class="d-flex align-items-center">
+                    <img id="photo_profil" class="navbar-brand" src="assets/images/photo_profil_anna.jpg"/>
+                    <div>
+                        <h2 id="txt_custom_h2">Bienvenue</h2>
+                        <h3 id="txt_custom_h3"> {{ user ? user.firstname : '' }}</h3>
+                    </div>
+                </div>
+                <hr>
+                <li class="col">
+                    <a class="nav-link text-red" routerLink="./">
+                        <img class="navbar-brand"  width="20" height="20" src="assets/icons/dashboard_user.png"/>
+                        Tableau de bord
+                    </a>
+                </li>
+                <hr>
+                <li class="col">
+                    <a data-bs-toggle="collapse" href="#collapseProduct" role="button" aria-expanded="false" aria-controls="collapseProduct" class="nav-link text-red dropdown-toggle">
+                        <img class="navbar-brand" width="20" height="20" src="assets/icons/profil_user.png"/>
+                        Mon Profil
+                    </a>
+                    <ul class="collapse" id="collapseProduct">
+                        <li><a class="dropdown-item" routerLink="./info_perso">Mes Informations personnelles</a></li>
+                        <li><a class="dropdown-item" routerLink="./my_paiement">Mes Moyens de paiement</a></li>
+                    </ul>
+                </li>
+                <hr>
+                <li class="col">
+                    <a class="nav-link text-red" routerLink="./my-orders">
+                        <img class="navbar-brand"  width="20" height="20" src="assets/icons/shopping-cart_user.png"/>
+                        Mes commandes
+                    </a>
+                </li>
+                <hr>   
+            </ul>
+        </div>
+
+        <!-- Menu Version Mobile -->
+        <div class="col-lg-3" id="menu_profil_v2">
+            <div class="d-flex align-items-center justify-content-center" id="custom_mobile_marg">
+                <img id="photo_profil" class="navbar-brand" src="assets/images/photo_profil_anna.jpg"/>
+                <div>
+                    <h2 id="txt_custom_h2">Bienvenue</h2>
+                    <h3 id="txt_custom_h3">NOM CLIENT</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <a data-bs-toggle="collapse" href="#collapseMenuMobile" role="button" aria-expanded="false" aria-controls="collapseMenuMobile" class="nav-link text-red dropdown-toggle">
+                    <img id="custom_icon_mobile" class="navbar-brand" width="25" height="25" src="assets/icons/menu_mobile_profile.png"/>
+                    Menu Profil
+                </a>
+            </div>
+            <hr>
+
+            <ul class="collapse flex-column" id="collapseMenuMobile">
+                <li>
+                    <a class="nav-link text-red" routerLink="./">
+                        <img id="custom_icon_mobile" class="navbar-brand"  width="20" height="20" src="assets/icons/dashboard_user.png"/>
+                        Tableau de bord
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a data-bs-toggle="collapse" href="#collapseProduct" role="button" aria-expanded="false" aria-controls="collapseProduct" class="nav-link text-red dropdown-toggle">
+                        <img id="custom_icon_mobile" class="navbar-brand" width="20" height="20" src="assets/icons/profil_user.png"/>
+                        Mon Profil
+                    </a>
+                    <ul class="collapse" id="collapseProduct">
+                        <li><a class="dropdown-item" routerLink="./info_perso">Mes Informations personnelles</a></li>
+                        <li><a class="dropdown-item" routerLink="./my_paiement">Mes Moyens de paiement</a></li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <a class="nav-link text-red" routerLink="./my-orders">
+                        <img id="custom_icon_mobile" class="navbar-brand"  width="20" height="20" src="assets/icons/shopping-cart_user.png"/>
+                        Mes commandes
+                    </a>
+                </li>
+                <hr>     
+            </ul>
+        </div>
+        <!-- FIN Menu Version Mobile -->
+
+        <div class="col-lg" id="margin_cus_mobile_content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>
+
+<!-- Mettre en place le changement de la photo de profil en fonction de celle enregistrer pour le compte utilisateur associé -->

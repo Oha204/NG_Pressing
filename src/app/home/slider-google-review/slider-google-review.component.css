@@ -1,0 +1,30 @@
+.star-rating {
+    font-size: 1.3em;
+    color: #ffc107;
+    margin-bottom:5px;
+}
+
+.avis-client-border {
+    border: 2px solid #b6b6b696;
+    padding: 15px;
+    border-radius: 10px; 
+    box-shadow: 5px 0px 6px #bebebe;
+    width: 550px;
+}
+
+.avis-client-border p {
+    font-size: 14px;
+}
+
+.carousel-control-prev-icon path, .carousel-control-next-icon path {
+        fill: black;
+    }
+
+#carouselExample {
+    height: 250px;
+}
+
+.carousel-inner {
+    height: 250px;
+}
+

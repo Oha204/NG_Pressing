@@ -1,0 +1,66 @@
+<div class="col">
+    <section>
+        <div>
+            <h2>Passez votre commande</h2>
+            <h3>Rapide et efficace, vous allez adorer</h3>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <p>Quel type de produit souhaitez-vous nous confier ?</p>
+                    <select class="form-control mb-3" [(ngModel)]="selectedArticle">
+                        <option selected disabled>Choisissez votre article ... </option>
+                        <option *ngFor="let article of articles" [value]="article.name">{{ article.name }} ({{ article.price }}€)</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-5">
+                    <p>Choisissez la quantité :</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button type="button" class="btn btn-outline-secondary" (click)="decreaseQuantity()">-</button> 
+                            <!-- -->
+                        </div>
+                        <input type="text" class="form-control text-center" [value]="articlesQuantity">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary" (click)="increaseQuantity()">+</button>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p>De quelle(s) matière(s) est-il composé ?  </p>
+                <select class="form-control mb-4" [(ngModel)]="selectedMaterial">
+                    <option selected disabled>Choisissez votre matière ... </option>
+                    <option *ngFor="let material of materials" [value]="material.name">{{ material.name }} ({{ material.price }}€)</option>
+                </select>
+            </div>
+
+            <div>
+                <p>Quelle prestation vous intéresse pour ce type de produit ?</p>
+                <div class="radio-container">
+                    <div class="radio-wrapper-42" *ngFor="let presta of prestations">
+                        <input type="radio" id="cbx" [value]="presta.name" name="selectedPrestation" [(ngModel)]="selectedPrestation">
+                        <label class="cbx" for="cbx"></label>
+                        <label class="lbl" for="cbx">{{ presta.name }} ({{ presta.price }}€)</label>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div  class="mt-4">
+                <p for="exampleFormControlTextarea1">Vous avez des détails à nous transmettre sur votre produit ? </p>
+                <textarea class="form-control" rows="4" placeholder="Votre message ..." [(ngModel)]="orderMessage"></textarea>
+            </div>
+
+            <div class="mt-4" id="btnMobCust">
+                <button type="button" id="btn3" class="btn" (click)="addToPanier(commandLine)">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+</div>

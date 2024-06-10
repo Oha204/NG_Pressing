@@ -1,0 +1,23 @@
+.modal-body p {
+    font-size : 14px;
+}
+
+#exampleModal {
+    margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+    #exampleModal {
+        margin-top: 40px;
+        padding-right: 20px;
+        padding-left : 20px;
+    }
+}
+
+@media (max-width: 573px) {
+    #exampleModal {
+        margin-top: 40px;
+        padding-right: 20px;
+        padding-left : 25px;
+    }
+}

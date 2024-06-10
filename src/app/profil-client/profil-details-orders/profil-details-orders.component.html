@@ -1,0 +1,185 @@
+<section id="custom_bloc_orders">
+    <!-- Bloc retour -->
+    <div class="retour_custom">
+        <a routerLink="/profil_user/my-orders" class="text-decoration-none text-dark"><img widtd="20" height="20" src="assets/icons/retour.png">Retour</a>
+    </div>
+    <hr class="mx-4">
+    <!-- Bloc suivi commande -->
+    <div class="padmarg_custom">
+        <div>
+            <h3 class="text-center pt-3">statut de votre commande</h3>
+            <div class="track">
+                <div class="step active"> 
+                    <span class="icon">
+                        <img class="inactive-icon" width="17" height="17" src="assets/icons/euro.png">
+                        <img class="active-icon" width="17" height="17" src="assets/icons/euro_bl.png">
+                    </span>
+                    <span class="text">Paiement</span>
+                </div>
+                <div class="step active"> 
+                    <span class="icon">
+                        <img class="inactive-icon" width="17" height="17" src="assets/icons/store.png">
+                        <img class="active-icon" width="17" height="17" src="assets/icons/store_bl.png">
+                    </span>
+                    <span class="text">Dépôt commande</span>
+                </div>
+                <div class="step active"> 
+                    <span class="icon">
+                        <img class="inactive-icon" width="17" height="17" src="assets/icons/preparation_order.png">
+                        <img class="active-icon" width="17" height="17" src="assets/icons/prep-order_bl.png">
+                    </span> 
+                    <span class="text">Prise en charge</span>
+                </div>
+                <div class="step active"> 
+                    <span class="icon">
+                        <img class="inactive-icon" width="17" height="17" src="assets/icons/check.png"> 
+                        <img class="active-icon" width="17" height="17" src="assets/icons/check_bl.png"> 
+                    </span> 
+                    <span class="text">C'est prêt !</span>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <hr class="mx-4">
+    <!-- Bloc détails commande -->
+    <div class="padmarg_custom">
+        <h3 class="text-center py-4">Détails de votre commande</h3>
+        <div class="details_info_order mt-4">
+            <div class="row">
+                <div class="col-sm">
+                    <p>N° de commande : A256HY85</p>
+                    <p>Date de paiement : 15/03/2023</p>
+                    <p>Date de dépôt : 16/03/2023</p>
+                </div>
+                <div class="col-sm d-flex flex-column ">
+                    <p>Moyen de paiement : Carte bancaire (*004)</p>
+                    <p>Titulaire : Anne-Marie LEBON</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div>
+                <div class="custom_margin_select">
+                    <!-- Détail commande V1 - PC/Tablette -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Prix <span class="info-bubble" value="prix du service sélectionné">ℹ️</span></th>
+                                <th scope="col">Article</th>
+                                <th scope="col">Prix <span class="info-bubble" value="prix unitaire de l'article sélectionné">ℹ️</span></th>
+                                <th scope="col">Qté</th>
+                                <th scope="col">Matière</th>
+                                <th scope="col">Prix <span class="info-bubble" value="prix supplémentaire pour les matières les plus difficiles à traiter">ℹ️</span></th>
+                                <th scope="col">Prix Total</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td scope="row" rowspan="3">Lavage + Repassage</td>
+                                    <td rowspan="3">6€</td> 
+                                    <td>T-shirts</td>
+                                    <td>1,20€</td>
+                                    <td>4</td> 
+                                    <td>Synthétique</td>
+                                    <td>+ 0€</td> 
+                                    <td>6,80€</td> <!-- [(prix unitaire * Qté) + prix supp] / [prix service / rowspan] -->
+                                </tr>
+                                <tr>
+                                    <td>Pantalons</td>
+                                    <td>2,50€</td>
+                                    <td>4</td> 
+                                    <td>Jeans</td>
+                                    <td>+ 0€</td> 
+                                    <td>12€</td>
+                                </tr>
+                                <tr>
+                                    <td>Sous-vêtement</td>
+                                    <td>0.20€</td>
+                                    <td>4</td>
+                                    <td>dentelle</td>
+                                    <td>+ 2€</td>
+                                    <td>4.80€</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Lavage</td>
+                                    <td>5€</td>
+                                    <td>Robe de soirée</td>
+                                    <td>6,50€</td>
+                                    <td>1</td>
+                                    <td>Cachemire</td>
+                                    <td>+ 4€</td>
+                                    <td>15,50€</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Total</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <th>39,10€</th>
+                                </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Détail commande V2 - Mobile -->
+                    <div class="tablev2">
+                        <h3>Selection n°1 :</h3>
+                        <div class="custom_margin_v2">
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Service : </p>
+                                <p>Lavage + Repassage </p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Prix <span class="info-bubble" value="prix du service sélectionné">ℹ️</span> : </p>
+                                <p>6€ </p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Article : </p>
+                                <p>T-shirts </p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Prix <span class="info-bubble" value="prix unitaire de l'article sélectionné">ℹ️</span> : </p>
+                                <p>1,20€ </p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Qté : </p>
+                                <p>4</p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Matière : </p>
+                                <p>Synthétique</p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Prix <span class="info-bubble" value="prix supplémentaire pour les matières les plus difficiles à traiter">ℹ️</span> : </p>
+                                <p>+ 0€</p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>Prix Total sélection n°1: </p>
+                                <p>6,80€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mx-4">
+        <div class="custom-Total_price">
+            <div class="d-flex flex-row justify-content-between">
+                <p>Total HT :</p>
+                <p>39,10€</p>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+                <p>Montant TVA (5,5%) :</p>
+                <p>2,15€</p> <!-- HT * (TVA/100) -->
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+                <p>Total TTC (5,5% TVA) :</p>
+                <p>41,25€</p> <!-- HT + TVA -->
+            </div>
+        </div>
+    </div>
+    
+</section>

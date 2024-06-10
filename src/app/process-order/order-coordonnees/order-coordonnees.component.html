@@ -1,0 +1,140 @@
+<!-- Bloc suivi commande -->
+<div class="padmarg_custom" >
+    <div class="container">
+        <div class="track">
+            <div class="step active"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/shopping-cart_user.png">
+                    <img class="active-icon" width="17" height="17" src="assets/icons/orders.png">
+                </span>
+                <span class="text">Panier</span>
+            </div>
+            <div class="step active"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/store.png">
+                    <img class="active-icon" width="17" height="17" src="assets/icons/store_bl.png">
+                </span>
+                <span class="text">Date de dépôt</span>
+            </div>
+            <div class="step"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/user_profil.png">
+                    <img class="active-icon" width="17" height="17" src="assets/icons/user_prodil_bl.png">
+                </span> 
+                <span class="text">Info Profil</span>
+            </div>
+            <div class="step"> 
+                <span class="icon">
+                    <img class="inactive-icon" width="17" height="17" src="assets/icons/euro.png"> 
+                    <img class="active-icon" width="17" height="17" src="assets/icons/euro_bl.png"> 
+                </span> 
+                <span class="text">Paiement</span>
+            </div>
+        </div>
+    </div>        
+</div>
+
+<!-- Panier PC -->
+<div class="container" id="panierPC">
+    <div class="row">
+        <div class="col-md col-lg-7 custTxt">
+            <h2 class="titleCustMob1">Identifiez-vous </h2>
+            <h3 class="titleCustMob2">Veuillez nous confirmer vos coordonnées : </h3>
+            <p class="txtCustSize">Pour valider votre commande, nous avons besoins de l'ensemble de vos informations. Si votre carte n'est pas complète, vous pouvez la remplir en cliquant sur "Modifier".</p>
+            <hr class="customMob">
+            <!-- Bloc 1 - cards contact profil -->
+            <div class="customMobmarg">
+            <div class="container customcardsProfil">
+                <div class="col-md d-flex flex-column justify-content-center" id="custom_card_profil">
+                    <div>
+                        <h3><img width="20" height="20" src="assets/icons/user_profil.png">Mme LEBON Anne-Marie</h3>
+                    </div>
+                    <div>
+                        <p class="d-flex align-items-center"><img width="20" height="20" src="assets/icons/home_user.png">235 cours de la République, 69003 LYON</p>
+                    </div>
+                    <div>
+                        <p class="d-flex align-items-center"><img width="20" height="20" src="assets/icons/telephone_user.png">06 20 69 78 43</p>
+                    </div>
+                    <div>
+                        <p class="d-flex align-items-center"><img width="20" height="20" src="assets/icons/mail.png">annemarie@gmail.com</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end editCust">
+                    <a class="d-flex align-items-center text-dark"><img width="20" height="20" src="assets/icons/pen.png">Modifier</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Bloc 2 - Récap Commande -->
+        <div class="col-md" id="resum_order">
+            <section id="test" style="background-color: rgba(113, 219, 200, 0.36);" >
+                <div class="custom-margin">
+                    <h3 class="text-center">Récaptulatif de votre commande</h3>
+                </div>
+        
+                <div class="customMarge">
+                    <div class="blocCustom" *ngFor="let commandline of panier; let i = index">
+                        <div class="row"> 
+                            <div class="col">
+                                <p>{{commandline.prestations.name}}</p>
+                            </div>
+                            <div class="col-2 text-end">
+                                <p>{{ getTotalPriceLineCommand(commandline) }}€</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>⨽ {{commandline.articles.name }} ({{commandline.articlesQuantity }})</p>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a type="submit" (click)="removeFromPanier(i)"><img src="assets/icons/trash-red.png" style="width: 13px;"></a>
+                            </div>
+                        </div>
+                            
+                            <p>⨽ {{commandline.materials.name }}</p>
+                        <div class="">
+                            <p class=""> Message (<img  width="15" height="15" src="assets/icons/discussion.png">)</p>
+                            <p class="">⨽ {{commandline.message }} </p>
+                        </div>
+                    </div>               
+                </div>
+        
+                <hr class="mx-4 my-4">
+        
+                <div class="bottomCust2">
+                    <div class="row custom-margin2">
+                        <div class="col custom-margin3">
+                            <p class="custom_content">Total HT :</p>
+                        </div>
+                        <div class="col-3 custom-margin3">
+                            <p class="text-end custom_content">{{ getTotalPriceAllCommands() }}€</p>
+                        </div>
+                    </div>
+        
+                    <div class="row custom-margin2">
+                        <div class="col custom-margin3">
+                            <p class="">Total TTC (TVA 10%) :</p>
+                        </div>
+                        <div class="col-3 custom-margin3">
+                            <p class="text-end">{{ getTotalPriceTTC() }}€</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row custom-margin2 mt-3">
+                    <div class="custom-margin3">
+                        <p>Date dépôt article(s) : </p>
+                    </div>
+                    <div class="custom-margin3">
+                        <p class="cust-txt-mobile mb-4">le {{ formatDate(selectedDate) }} </p>
+                    </div>
+                </div>
+        
+                <div  class="bottomCust">
+                    <button routerLink="/order_paiement" type="submit" id="btn1" class="btn mb-3">Continuer</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

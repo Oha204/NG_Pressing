@@ -1,0 +1,61 @@
+<!--Récapitulatif commande - Panier-->
+<div id="resum_order">
+    <section id="test" style="background-color: rgba(113, 219, 200, 0.36);" >
+        <div class="custom-margin">
+            <h3 class="text-center">Récaptulatif de votre commande</h3>
+        </div>
+
+        <div class="customMarge">
+            <div class="blocCustom" *ngFor="let commandline of panier; let i = index">
+                <div class="row"> 
+                    <div class="col">
+                        <p>{{commandline.prestations.name}}</p>
+                    </div>
+                    <div class="col-2 text-end">
+                        <p>{{ getTotalPriceLineCommand(commandline) }}€</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>⨽ {{commandline.articles.name }} ({{commandline.articlesQuantity }})</p>
+                    </div>
+                    <div class="col-2 text-end">
+                        <a type="submit" (click)="removeFromPanier(i)"><img src="assets/icons/trash-red.png" style="width: 13px;"></a>
+                    </div>
+                </div>
+                    
+                    <p>⨽ {{commandline.materials.name }}</p>
+                <div class="">
+                    <p class=""> Message (<img  width="15" height="15" src="assets/icons/discussion.png">)</p>
+                    <p class="">⨽ {{commandline.message }} </p>
+                </div>
+            </div>               
+        </div>
+
+        <hr class="mx-4 my-4">
+
+        <div class="bottomCust2">
+            <div class="row custom-margin2">
+                <div class="col custom-margin3">
+                    <p class="custom_content">Total HT :</p>
+                </div>
+                <div class="col-3 custom-margin3">
+                    <p class="text-end custom_content">{{ getTotalPriceAllCommands() }}€</p>
+                </div>
+            </div>
+
+            <div class="row custom-margin2">
+                <div class="col custom-margin3">
+                    <p class="">Total TTC (TVA 10%) :</p>
+                </div>
+                <div class="col-3 custom-margin3">
+                    <p class="text-end">{{ getTotalPriceTTC() }}€</p>
+                </div>
+            </div>
+        </div>
+
+        <div  class="bottomCust">
+            <button routerLink="/panier" type="submit" id="btn1" class="btn mb-3">Continuer</button>
+        </div>
+    </section>
+</div>

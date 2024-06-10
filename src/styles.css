@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+/* POLICES */
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ananda';
+    src: url('assets/fonts/Ananda Black Personal Use.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
+/* GLOBAL */
+h2 {
+    font-family: 'Ananda';
+    color: #02082B;
+    font-size:45px;
+}
+
+h3 {
+    font-family: 'BebasNeue';
+    color: #02082B;
+    font-size: 32px;
+}
+
+p {
+    font-family: 'Roboto';
+    color: #02082B;
+}
+
+li {
+    font-family: 'Roboto';
+    color: #02082B;
+}
+
+th {
+    font-family: 'Roboto';
+    color: #02082B;
+}
+
+td {
+    font-family: 'Roboto';
+    color: #02082B;
+}
+
+#btn1 {
+    font-family: 'Roboto';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #02082B;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 20px;
+}
+#btn1:hover {
+    background-color: #02082b00;
+    color: #02082B;
+    border : solid 1px #02082B;
+    font-weight: 500;
+}
+
+#btn1:hover #imgBtn1 {
+    content: url('assets/icons/download.png'); 
+}
+
+#btn2 {
+    font-family: 'Roboto';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #70baca;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+#btn2:hover {
+    background-color: #02082b00;
+    color: #70baca;
+    border : solid 1px #70baca;
+}
+
+#btn3 {
+    font-family: 'Roboto';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #02082b00;
+    border : solid 1px #02082B;
+    color: #02082B;
+    letter-spacing: 1px;
+    border-radius: 20px;
+}
+#btn3:hover {
+    background-color: #02082B;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#btn3:hover #imgBtn3 {
+    content: url('assets/icons/download_bl.png'); 
+}
+
+#btn4 {
+    font-family: 'Roboto';
+    font-size: 13px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #02082B;
+    color: #fefeff;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    opacity: 70%;
+}
+#btn4:hover {
+    background-color: #02082b00;
+    color: #02082B;
+    border : solid 1px #02082B;
+    opacity: 70%;
+}
+
+

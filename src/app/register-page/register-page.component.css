@@ -1,0 +1,53 @@
+#bloc_register {
+    padding-top : 130px;
+    background-image: linear-gradient(to bottom, #9FC5CE, #67959F);
+    height: 100vh;
+}
+
+#customForm {
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 20px;
+    background-color: #9FC5CE;
+    box-shadow: 7px -3px 10px #67959F;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 768px) {
+    #custom_title_mobile h2 {
+        font-size: 38px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #custom_title_mobile h3 {
+        font-size: 30px;
+    }
+
+    #custom_title_mobile {
+        margin-top: 30px;
+    }
+
+    #custom_margin_mobile {
+        margin-bottom: 0px !important;
+    }
+    form label {
+        margin-top: 10px;
+    }
+
+    #bloc_register {
+        height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    #bloc_register {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 522px) {
+    form  {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}

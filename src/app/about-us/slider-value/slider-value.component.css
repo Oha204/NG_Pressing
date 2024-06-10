@@ -1,0 +1,15 @@
+#carouselExampleIndicators {
+    height: 250px;
+}
+
+.carousel-inner {
+    height: 250px;
+    display: flex;
+    margin : auto;
+    text-align: center;
+    align-items: center;
+}
+
+.carousel-inner img {
+    width: 110px;
+}

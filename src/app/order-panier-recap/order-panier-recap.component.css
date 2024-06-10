@@ -1,0 +1,93 @@
+/* Récapitulatif commande */
+p {
+    margin-bottom: 0px;
+}
+
+.customMarge {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.blocCustom {
+    margin-bottom: 10px;
+}
+
+#resum_order {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#test { 
+    box-shadow: 2px 3px 20px rgba(63, 61, 61, 0.164);
+
+border-radius: 25px;;
+}
+.bottomCust{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomCust2{
+    padding-bottom: 60px;
+}
+
+.customBloc_orders {
+    margin-bottom: 13px;
+}
+.custom-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.custom-margin2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.custom-margin3 p {
+    margin-bottom: 0px;
+}
+.custom-margin3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.custom_content {
+    font-size: 14px;
+}
+
+.trash {
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-margin4 {
+    margin-left: 80px;
+    padding-left: 0px;
+}
+.custom-margin4 p {
+    margin-bottom: 0px;
+}
+.custom-margin5 p {
+    margin-bottom: 0px;
+}
+
+.custom-margin5 {
+    margin-left: 80px;
+    margin-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.customTxt {
+    font-size : 12px;
+    text-align: justify;
+    margin-right: 79px;
+    margin-top: 5px;
+}
+

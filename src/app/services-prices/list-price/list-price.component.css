@@ -1,0 +1,23 @@
+#itemsform p {
+    font-size : 15px;
+    margin-bottom:0;
+}
+
+#priceform {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.accordion-item button{
+    font-size: 25px;
+}
+
+@media (max-width: 991px) {
+    .custom-mobile {
+        text-align: center;
+    }
+
+    #priceform {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,253 @@
+p {
+    margin-bottom: 0px;
+}
+
+.customMarge {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.blocCustom {
+    margin-bottom: 10px;
+}
+
+.padmarg_custom {
+    padding-bottom: 80px;
+    padding-top: 110px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Suivi commande */
+.track{
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 50px
+}
+
+
+.track .step{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+.track .step.active:before{
+    background: #02082B
+}
+.track .step::before{
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+.track .step.active .icon{
+    background: #02082B;
+    color: #02082B;
+    text-align: center;
+}
+.track .icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+.track .step.active .text{
+    font-weight: 400;
+    color: #000
+}
+.track .text{
+    display: block;
+    margin-top: 7px
+}
+
+.track .icon .active-icon {
+    display: none;
+}
+
+.track .step.active .icon .active-icon {
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.track .step.active .icon .inactive-icon {
+    display: none;
+}
+
+.track .icon .inactive-icon {
+    display: inline-block;
+}
+
+
+/* Panier PC */
+/* Bloc 1 - Selected Creaneau */
+.customselectDate {
+    margin-top: 40px;
+}
+
+.customcontainer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.customcontainer label{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.btncustom {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.custMob {
+    margin-right: 15px;
+}
+
+/* Récapitulatif commande */
+
+#resum_order {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#test { 
+    box-shadow: 2px 3px 20px rgba(63, 61, 61, 0.164);
+}
+.bottomCust{
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomCust2{
+    padding-bottom: 10px;
+}
+
+.customBloc_orders {
+    margin-bottom: 13px;
+    margin-top: 13px;
+}
+.custom-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.custom-margin2 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.custom-margin3 p {
+    margin-bottom: 0px;
+}
+.custom-margin3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.custom_content {
+    font-size: 14px;
+}
+
+/* Récapitulatif commande - responsive */
+@media (max-width: 1400px) {
+    #resum_order {
+        padding-right: 0px;
+    }
+
+    .custTxt h3{
+        font-size: 30px;
+    }
+}
+
+ /* responsive frise chrono suivi commande */
+@media (max-width: 1025px) {
+    .padmarg_custom {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .padMobCust {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #resum_order {
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+
+    .custTxt h2 {
+        text-align: center;
+    }
+    .custTxt h3 {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .customcontainer {
+        padding-bottom: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    #resum_order {
+        padding-left: 0px;
+        padding-bottom: 50px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    .custTxt h2 {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .custTxt h3 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .customMob {
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+
+    .customcontainer {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+@media (max-width: 562px) {
+    .padmarg_custom {
+        width: 80%;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}
